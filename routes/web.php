@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = \App\Employee::all();
+    return view('welcome')->withSomething($data);
 });
